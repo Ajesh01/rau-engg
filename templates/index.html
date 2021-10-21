@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+
+    <style>
+      
+.scroll {
+    color: #fff;
+    margin-top: 100px
+}
+
+#toTopBtn {
+    position: fixed;
+    bottom: 26px;
+    right: 39px;
+    z-index: 98;
+    padding: 21px;
+    /* background-color: hsla(5, 76%, 62%, .8) */
+}
+
+.js .cd-top--fade-out {
+    opacity: .5
+}
+
+.js .cd-top--is-visible {
+    visibility: visible;
+    opacity: 1
+}
+
+.js .cd-top {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s, background-color .3s
+}
+
+.cd-top {
+    position: fixed;
+    /* bottom: 20px;
+    /* bottom: var(--cd-back-to-top-margin); */
+    right: 20px;
+    right: var(--cd-back-to-top-margin);
+    display: inline-block;
+    height: 40px;
+    height: var(--cd-back-to-top-size);
+    width: 40px;
+    width: var(--cd-back-to-top-size); 
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important; */
+    /* background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%; */
+    /* background-color: hsla(5, 76%, 62%, .8); */
+    /* background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8) */
+}
+
+    </style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">  
+</head>
+  <body>
+    <a href="#" id="toTopBtn" class="" >
+      <i class="fas fa-arrow-circle-up fa-3x" style="color:rgb(34, 37, 41)"></i>
+    </a>
+      <!-- <div style="width:100%;height:50px;background-color: black;"></div> -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-dark  shadow-sm">
+        <div class="container-fluid ">
+          <a style="padding-top: 0;
+
+          padding-bottom: 0;" >
+           <img class="bi me-2" style="margin-left:5%;" src="static/img/logo.jpeg" width="23%" height="100%" alt="">
+
+          
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-flex  align-items-center justify-content-center " id="navbarScroll">
+
+            
+            <ul class="navbar-nav  col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0  " style="--bs-scroll-height: 100px;">
+              <li class="nav-item " >
+                <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item" style="margin-left:2vw;">
+                <a class="nav-link text-white" href="/">About us</a>
+              </li>
+              <li class="nav-item" style="margin-left:2vw;">
+                <a class="nav-link text-white" href="/">Contact</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Link
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+              </li> -->
+            </ul>
+            <!-- <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+          </div>
+        </div>
+      </nav>
+
+
+      <!-- <header class=" sticky-top bg-white text-dark border-bottom shadow-sm navbar-expand-lg" style="padding-top: 0.5rem !important;
+
+        padding-bottom: 0.5rem !important;">
+
+
+<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            
+            <img class="bi me-2" style="margin-left:5%;" src="static/img/logo.jpeg" width="23%" height="100%" alt="">
+          
+          </a>
+    
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
+          
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+
+
+    </div>
+        </header> -->
+ 
+
+
+
+      <div class= "container" style="height:auto; margin-top:5vh;width: 100vw;">
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="static/img/Image - 1.jpeg" style=" width: 100%;" class="d-block " alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="static/img/Image - 2.jpeg" style=" width: 100%;" class="d-block " alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="static/img/Image - 3.jpeg" style=" width: 100%;" class="d-block " alt="...">
+              </div>
+            </div>
+          </div>
+<br><br>
+          
+
+
+
+
+  <div class="container py-4">
+            <header class="pb-3 mb-4 border-bottom">
+              <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg> -->
+                <!-- <span class="fs-4">Jumbotron example</span> -->
+              </a>
+            </header>
+        
+            <div class="p-5 mb-4 bg-light rounded-3">
+              <div class="container-fluid py-5">
+                <h1 class="display-6 fw-bold">What we do</h1>
+                <p class="col-md-8 fs-4"> <br>
+                  We design, build oil and gas facilities, which we deliver through a range of flexible and innovative commercial models that can be aligned to an individual client, project or asset. 
+                  This enables us to respond to the distinct needs of each client and help them to transform the value of their assets across the oil and gas life cycle.
+                  <br><br>
+                  Engineering expertise is at the heart of everything we do. Our teams provide a full suite of engineering services including conceptual and feasibility studies and front-end engineering and design (FEED) through to detailed design for both onshore and offshore facilities.
+
+                </p>
+                <!-- <button class="btn btn-primary btn-lg" type="button">Example button</button> -->
+              </div>
+            </div>
+        
+            <div class="row align-items-md-stretch">
+              <div class="col-md-6">
+                <div class="h-100 p-5 text-white bg-dark rounded-3">
+                  <h2>Manpower Outsourcing</h2>
+                  <p><br>
+                    We are providing customized solution to the service companies, consultancies and oil and gas operators whether they are national or international.
+                    <br><br> Be it complete Project based requirement on Turnkey basis, short term requirement for Project Peak Periods, expected / unexpected load or towards the end of project or requirement of specialized manpower or simply the need for third party pay roll services, Like One-time placement Service, Contract Based Service and Deputation based Flexible Staffing Service. we have tailor-made solutions depending on client needs.
+
+                  </p>
+                 
+                  <!-- <button class="btn btn-outline-light" type="button">Example button</button> -->
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="h-100 p-5 bg-dark  text-white rounded-3">
+                  <h2>Creating Value: From Concept to Completion</h2>
+                  <p><br>We build our plants quickly so our customers monetize their fields faster and achieve maximum return on investment.
+                  </p>
+                  <!-- <button class="btn btn-outline-secondary" type="button">Example button</button> -->
+                </div>
+              </div>
+            </div>
+            <br><br>
+        
+            <div class="jumbotron jumbotron-fluid border-top">
+              <br><br>
+              
+                          <div class="container">
+                            <h2 class="display-6 fw-bold text-center">How we work</h2>
+                            <br>
+                            <p class="lead">From the moment we decide to bid on a project, the discipline begins. We identify risks from the outset, ensure a clear understanding of project complexity, and maintain our risk management rigor each step of the way.
+                              <br><br>For us, operational excellence is about constantly questioning what we do, and how we do it, in order to drive continuous improvement and maintain our competitive edge. Our engineers have found new ways to take cost and complexity out of our projects by driving value engineering: using new techniques, challenging conventional wisdom, and making better use of automation – while still delivering on client demands for quality and certainty.
+                              </p>
+                          </div>
+              
+                        <br><br>
+            <!-- <footer class="pt-3 mt-4 text-muted border-top">
+              &copy; 2021
+            </footer> -->
+          </div>
+
+
+          
+
+  <div class="" id="custom-cards">
+    <h2 class="pb-2 border-top display-6 fw-bold text-center"><br>Our values and culture</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('static/img/safety-1.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class=" display-6 lh-1 fw-bold">SAFE</h2>
+            <h5 class="mt-5 mb-4 lh-1"> Safety is our first and our most important value; from our people, clients and the communities we work in, to the integrity of the assets and facilities we build.</h5>
+            <!-- <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>California</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>5d</small>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+            <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('static/img/safety-2.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class=" display-6 lh-1 fw-bold">ETHICAL</h2>
+            <h5 class="mt-5 mb-4 lh-1"> We aspire to the highest standards of ethical behavior. <br>This means doing the right thing for our clients, employees, communities and the environment in which we operate.</h5>
+            <!-- <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>California</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>5d</small>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+
+        <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('static/img/safety-3.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class=" display-6 lh-1 fw-bold">INNOVATIVE</h2>
+            <h5 class="mt-5 mb-4 lh-1">It’s in our nature to think differently, use our initiative, and positively challenge convention. From the commercial to the technical, we seek out new ways to add value.</h5>
+            <!-- <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>California</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>5d</small>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('static/img/safety-4.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class=" display-6 lh-1 fw-bold">RESPONSIVE</h2>
+            <h5 class="mt-5 mb-4 lh-1"> We take time to understand what our clients want and tailor our services to meet those needs. We are quick to respond when challenges arise and do everything in our power to overcome them.
+            </h5>
+            <!-- <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>California</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>5d</small>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+            <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('static/img/safety-5.jpg');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class=" display-6 lh-1 fw-bold">QUALITY AND COST CONSCIOUS</h2>
+            <h5 class="mt-5 mb-4 lh-1"> We work to optimize value for our clients, without compromising quality and integrity.
+            </h5>
+            <!-- <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>California</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>5d</small>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+
+        <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('static/img/safety-6.jpg');background-repeat: no-repeat">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class=" display-6 lh-1 fw-bold">DRIVEN TO DELIVER</h2>
+            <h5 class="mt-5 mb-4 lh-1">We have a relentless focus on delivery and exceeding our clients’ expectations.
+            </h5>
+            <!-- <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>California</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>5d</small>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</div>
+
+
+
+  
+</div>
+</div>
+
+<script>
+$(document).ready(function() {
+  if ($(this).scrollTop() > 100) {
+$('#toTopBtn').fadeIn();
+} else {
+$('#toTopBtn').fadeOut(1);
+}
+$(window).scroll(function() {
+  // console.log($(this).scrollTop());
+if ($(this).scrollTop() > 850) {
+$('#toTopBtn').fadeIn();
+} else {
+$('#toTopBtn').fadeOut();
+}
+});
+
+$('#toTopBtn').click(function() {
+$("html, body").animate({
+scrollTop: 0
+}, 1000);
+return false;
+});
+});
+</script>
+
+
+      <footer class="footer mt-auto py-3 bg-light" style="margin-top:50px;">
+        <div class="container text-center">
+          <span class="text-muted ">Copyright © 2021 Designed by : Rau Engineering.
+            All Rights Reserved.</span>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
