@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Rau Engineering & Research</title>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">  
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+
+
+
+
+    <style>
+        .parallax {
+  /* The image used */
+  background-image: url('static/img/about-us.jpg');
+
+  /* Set a specific height */
+  min-height: 90vh; 
+  background-color: Black;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity:85%;
+}
+
+
+
+     
+.scroll {
+    color: #fff;
+    margin-top: 100px
+}
+
+#toTopBtn {
+    position: fixed;
+    bottom: 26px;
+    right: 39px;
+    z-index: 98;
+    padding: 21px;
+    /* background-color: hsla(5, 76%, 62%, .8) */
+}
+
+.js .cd-top--fade-out {
+    opacity: .5
+}
+
+.js .cd-top--is-visible {
+    visibility: visible;
+    opacity: 1
+}
+
+.js .cd-top {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s, background-color .3s
+}
+
+.cd-top {
+    position: fixed;
+    /* bottom: 20px;
+    /* bottom: var(--cd-back-to-top-margin); */
+    right: 20px;
+    right: var(--cd-back-to-top-margin);
+    display: inline-block;
+    height: 40px;
+    height: var(--cd-back-to-top-size);
+    width: 40px;
+    width: var(--cd-back-to-top-size); 
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important; */
+    /* background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%; */
+    /* background-color: hsla(5, 76%, 62%, .8); */
+    /* background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8) */
+}
+
+
+
+
+
+
+/* nav {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px 0;
+  box-shadow: 0px 5px 0px #dedede;
+} */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #aaa;
+  /* font-weight: 800; */
+  text-transform: uppercase;
+  margin: 0 10px;
+  color :rgb(205, 205, 205) !important;
+
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+  
+}
+nav ul li a:hover {
+  /* color: rgb(186, 186, 186) !important; */
+  color: white !important;
+
+}
+
+
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0 !important;
+}
+nav.fill ul li a:hover {
+  color: #fff !important;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1 !important;
+}
+    </style>
+</head>
+<body>
+    <a href="#" id="toTopBtn" class="" >
+        <i class="fas fa-arrow-circle-up fa-3x" style="color:rgb(129, 43, 19)"></i>
+      </a>
+        
+
+
+    
+    
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-dark  shadow-sm d-none d-lg-block stroke">
+        <div class="container-fluid ">
+          <a style="padding-top: 0;
+
+          padding-bottom: 0; width:auto;" >
+           <img class="bi me-2" style="margin-left:5%;" src="static/img/logo.jpeg" width="23%" height="100%" alt="">
+
+          
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-flex  align-items-center justify-content-center " id="navbarScroll">
+
+            
+            <ul class="navbar-nav  col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0  " style="--bs-scroll-height: 100px;">
+              <li class="nav-item " >
+                <a class="nav-link active " aria-current="page" href="/" style="font-size: 125%">Home</a>
+              </li>
+              <li class="nav-item" style="margin-left:2vw;">
+                <a class="nav-link  " href="/" style="font-size: 125%">About us</a>
+              </li>
+              <li class="nav-item" style="margin-left:2vw;">
+                <a class="nav-link " href="/" style="font-size: 125%">Contact</a>
+              </li>
+  
+            </ul>
+     
+          </div>
+        </div>
+      </nav>
+
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white d-lg-none">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">            -->
+            <img class="bi me-2" style="margin-left:5%;" src="static/img/logo.jpeg" width="23%" height="100%" alt="">
+          <!-- </a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item " style="margin-left:2vw;">
+                <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item" style="margin-left:2vw;">
+                <a class="nav-link text-white " href="/">About us</a>
+              </li>
+              <li class="nav-item" style="margin-left:2vw;">
+                <a class="nav-link text-white" href="/">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    
+      <!-- <div class="cover-container d-flex w-100  p-3 mx-auto flex-column  text-center text-white bg-dark img-fluid" style="max-height:100%;height: auto;background-image: url('static/img/about-us.jpg');">
+
+      <main role="main" class="inner cover">
+        <h2 class="cover-heading">Who we are</h2>
+        <p class="lead">
+            We are a service provider to the oil and gas production and processing industry. We design, build oil and gas facilities, with commitment, delivery and operational excellence.
+We respond to the different needs of each client, helping them to transform the value of their assets across the oil and gas life cycle. Our service offering is underpinned by our provision of skills training with competency development and assurance frameworks.
+<br>Our teams:
+Design and build oil and gas infrastructure
+Train personnel
+
+        </p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
+      </main>
+
+</div> -->
+<div class="parallax" class="img-fluid">
+    <div role="main" class="text-white" style="max-width: 30vw;margin-left:58%;" data-aos="fade-up">
+        <h2 class="cover-heading" style="padding-top:30%;">Who we are</h2>
+        <p class="lead">
+            We are a service provider to the oil and gas production and processing industry. We design, build oil and gas facilities, with commitment, delivery and operational excellence.
+We respond to the different needs of each client, helping them to transform the value of their assets across the oil and gas life cycle. Our service offering is underpinned by our provision of skills training with competency development and assurance frameworks.
+<br>Our teams:<br>
+Design and build oil and gas infrastructure<br>
+Train personnel
+
+        </p>
+   
+    </div>
+    <div class="text-center flex" style="margin-top:20vh;" >
+    <a href="#" id="down-chevron" ><i class="fas fa-chevron-down text-center fa-3x" style="color:rgb(34, 37, 41)"></i></a>
+</div>
+</div>
+
+<div class="flex "  data-aos="fade-up">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center border-top  border-bottom " style="margin-top:10vh;padding-bottom:5vh;">
+          <h2 class="display-7 " style="margin-top:5vh;">Engineering Design Services Offer a Complete Solution</h2>
+          <img src="static/img/about-pic-1.PNG"  class="lead" style="max-width:30vw;margin-top:5vh;">
+          <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+        </div>
+      </div>
+</div>
+
+<div class="flex " data-aos="fade-up">
+    <div class="jumbotron jumbotron-fluid" style="">
+        <div class="flex text-center bg-light  rounded-3" style="width:100vw;margin-top:10vh;padding-bottom:5vh;padding-top:5vh;min-height:70vh;">
+          <h2 class="display-7 " style="">Site Photos</h2>
+          <div class="container">
+            <div class="row" style="margin-top:10vh" >
+              <div class="col" data-aos="fade-right">
+                <img src="static/img/site-1.png"  class="lead rounded-3"  style="max-width:100%;">
+               
+              </div>
+              <div class="col" data-aos="fade-left">
+                <img src="static/img/site-2.png"  class="lead rounded" style="max-width:100%;">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div class="flex " data-aos="fade-up">
+    <div class="jumbotron jumbotron-fluid" style="">
+        <div class="flex text-center bg-light  rounded-3" style="width:100vw;margin-top:10vh;padding-bottom:5vh;padding-top:5vh;min-height:70vh;">
+          <h2 class="display-7 " style="">3D Model Outputs</h2>
+          <div class="container">
+            <div class="row" style="margin-top:10vh">
+              <div class="col" data-aos="fade-right">
+                <img src="static/img/model-1.png"  class="lead rounded-3"  style="max-width:100%;">
+               
+              </div>
+              <div class="col" data-aos="fade-left">
+                <img src="static/img/model-2.png"  class="lead rounded" style="max-width:100%;">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+<br>
+<br>
+    <footer class="footer mt-auto py-3 bg-dark text-white"  >
+        <div class="flex row" style="margin-bottom:10px">
+            <div class="col">
+                <div class="container p-3" style="max-width:50%;">
+                <h5  class="font-weight-bold" style="margin-bottom:15px;">Rau Engineering & Research:</h5>
+                <hr>
+
+                <br>
+                    <h5 style="margin-bottom:15px;">Kazakhstan:</h5>
+                
+                    
+                    <p>Isatay Taimanov avenue 48 block C, apartment 380, Atyrau, Kazakhstan</p>
+                    
+                </div>
+            </div>
+            <div class="col">
+                <div class="container p-3" style="max-width:50%;">
+                    
+                <h5 class=" font-weight-bold"> Contact Information</h5>
+                <hr>
+                <br>
+                    <h5 style="margin-bottom:15px;">email:</h5>
+                    
+                    <p>business@rauengineering.net</p><br>
+                    
+                    <h5 style="margin-bottom:15px;">phone:</h5>
+
+                    <p>+7707 7931016</p>
+                    <p>+77022918188</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container text-center">
+          <span class="text-muted ">Copyright © 2021 Designed by : Rau Engineering & Research.
+            All Rights Reserved.</span>
+        </div>
+      </footer>
+
+
+
+      <script>
+        $(document).ready(function() {
+          if ($(this).scrollTop() > 100) {
+              
+                $('#toTopBtn').fadeIn();
+            } else {
+                $('#toTopBtn').fadeOut(1);
+            }
+        $(window).scroll(function() {
+        //   console.log($(this).scrollTop());
+        if ($(this).scrollTop() > 850) {
+                $('#toTopBtn').fadeIn();
+            } else {
+                $('#toTopBtn').fadeOut();
+            }
+        });
+        
+        $('#toTopBtn').click(function() {
+            
+
+        $("html, body").animate({
+            scrollTop: 0
+            }, 1000);
+        return false;
+        });
+
+        $('#down-chevron').click(function() {
+        $("html, body").animate({
+            scrollTop: 860
+            }, 1000);
+        return false;
+        });
+        });
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
