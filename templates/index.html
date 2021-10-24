@@ -150,7 +150,8 @@ nav.fill ul li a:hover:after {
       <i class="fas fa-arrow-circle-up fa-3x" style="color:rgb(129, 43, 19)"></i>
     </a>
       <!-- <div style="width:100%;height:50px;background-color: black;"></div> -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-dark  shadow-sm d-none d-lg-block stroke">
+
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-dark  shadow-sm d-none d-lg-block stroke">
         <div class="container-fluid ">
           <a style="padding-top: 0;
 
@@ -170,17 +171,23 @@ nav.fill ul li a:hover:after {
                 <a class="nav-link active " aria-current="page" href="/" style="font-size: 125%">Home</a>
               </li>
               <li class="nav-item" style="margin-left:2vw;">
-                <a class="nav-link  " href="/about" style="font-size: 125%">About us</a>
+                <a class="nav-link  " href="/about" style="font-size: 125%">About</a>
               </li>
               <li class="nav-item" style="margin-left:2vw;">
-                <a class="nav-link " href="/" style="font-size: 125%">Contact</a>
+                <a class="nav-link" id="contact-nav" href="#" style="font-size: 125%">Contact us</a>
               </li>
+              <li class="nav-item" style="margin-left:2vw;">
+                <a class="nav-link " href="/careers" style="font-size: 125%">Careers</a>
+              </li>
+              
+             
   
             </ul>
      
           </div>
         </div>
       </nav>
+
 
 
 
@@ -198,10 +205,13 @@ nav.fill ul li a:hover:after {
                 <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item" style="margin-left:2vw;">
-                <a class="nav-link text-white " href="/">About us</a>
+                <a class="nav-link text-white " href="/about">About</a>
               </li>
+              <!-- <li class="nav-item" style="margin-left:2vw; " id="contact-nav">
+                  <a class="nav-link text-white "  href="#">contact us</a>
+                </li> -->
               <li class="nav-item" style="margin-left:2vw;">
-                <a class="nav-link text-white" href="/">Contact</a>
+                <a class="nav-link text-white" href="/careers">Careers</a>
               </li>
             </ul>
           </div>
@@ -431,6 +441,16 @@ scrollTop: 0
 return false;
 });
 });
+
+
+
+$('#contact-nav').click(function() {
+        $("html, body").animate({
+            scrollTop: 3000
+            }, 1000);
+        return false;
+        });
+        
 </script>
 
 

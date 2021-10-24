@@ -3,9 +3,101 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Not Found</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <title>Rau Engineering & Research</title>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
     <style media="screen">
+
+
+
+
+/* nav {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px 0;
+  box-shadow: 0px 5px 0px #dedede;
+} */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #aaa;
+  /* font-weight: 800; */
+  text-transform: uppercase;
+  margin: 0 10px;
+  color :rgb(205, 205, 205) !important;
+
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+  
+}
+nav ul li a:hover {
+  /* color: rgb(186, 186, 186) !important; */
+  color: white !important;
+
+}
+
+
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0 !important;
+}
+nav.fill ul li a:hover {
+  color: #fff !important;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1 !important;
+}
+   
       body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
       #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px 16px; border-radius: 3px; }
       #message h3 { color: #888; font-weight: normal; font-size: 16px; margin: 16px 0 12px; }
@@ -22,12 +114,79 @@
     </style>
   </head>
   <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-dark  shadow-sm d-none d-lg-block stroke">
+      <div class="container-fluid ">
+        <a style="padding-top: 0;
+
+        padding-bottom: 0; width:auto;" >
+         <img class="bi me-2" style="margin-left:5%;" src="static/img/logo.jpeg" width="23%" height="100%" alt="">
+
+        
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex  align-items-center justify-content-center " id="navbarScroll">
+
+          
+          <ul class="navbar-nav  col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0  " style="--bs-scroll-height: 100px;">
+            <li class="nav-item " >
+              <a class="nav-link active " aria-current="page" href="/" style="font-size: 125%">Home</a>
+            </li>
+            <li class="nav-item" style="margin-left:2vw;">
+              <a class="nav-link  " href="/about" style="font-size: 125%">About</a>
+            </li>
+            <li class="nav-item" style="margin-left:2vw;">
+              <a class="nav-link" id="contact-nav" href="#" style="font-size: 125%">Contact us</a>
+            </li>
+            <li class="nav-item" style="margin-left:2vw;">
+              <a class="nav-link " href="/careers" style="font-size: 125%">Careers</a>
+            </li>
+            
+           
+
+          </ul>
+   
+        </div>
+      </div>
+    </nav>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white d-lg-none">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">            -->
+          <img class="bi me-2" style="margin-left:5%;" src="static/img/logo.jpeg" width="23%" height="100%" alt="">
+        <!-- </a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item " style="margin-left:2vw;">
+              <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item" style="margin-left:2vw;">
+              <a class="nav-link text-white " href="/about">About</a>
+            </li>
+            <!-- <li class="nav-item" style="margin-left:2vw; " id="contact-nav">
+                <a class="nav-link text-white "  href="#">contact us</a>
+              </li> -->
+            <li class="nav-item" style="margin-left:2vw;">
+              <a class="nav-link text-white" href="/careers">Careers</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div id="message">
       <h2>404</h2>
       <h1>Page Not Found</h1>
       <p>The specified file was not found on this website. Please check the URL for mistakes and try again.</p>
-      <h3>Why am I seeing this?</h3>
-      <p>This page was generated by the Firebase Command-Line Interface. To modify it, edit the <code>404.html</code> file in your project's configured <code>public</code> directory.</p>
     </div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>

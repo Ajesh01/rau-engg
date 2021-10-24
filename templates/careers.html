@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Rau Engineering & Research</title>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">  
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+
+
+
+
+    <style>
+        .parallax {
+  /* The image used */
+  background-image: url('static/img/about-us.jpg');
+
+  /* Set a specific height */
+  min-height: 90vh; 
+  background-color: Black;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity:85%;
+}
+
+
+
+     
+.scroll {
+    color: #fff;
+    margin-top: 100px
+}
+
+#toTopBtn {
+    position: fixed;
+    bottom: 26px;
+    right: 39px;
+    z-index: 98;
+    padding: 21px;
+    /* background-color: hsla(5, 76%, 62%, .8) */
+}
+
+.js .cd-top--fade-out {
+    opacity: .5
+}
+
+.js .cd-top--is-visible {
+    visibility: visible;
+    opacity: 1
+}
+
+.js .cd-top {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s, background-color .3s
+}
+
+.cd-top {
+    position: fixed;
+    /* bottom: 20px;
+    /* bottom: var(--cd-back-to-top-margin); */
+    right: 20px;
+    right: var(--cd-back-to-top-margin);
+    display: inline-block;
+    height: 40px;
+    height: var(--cd-back-to-top-size);
+    width: 40px;
+    width: var(--cd-back-to-top-size); 
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important; */
+    /* background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%; */
+    /* background-color: hsla(5, 76%, 62%, .8); */
+    /* background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8) */
+}
+
+
+
+
+
+
+/* nav {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px 0;
+  box-shadow: 0px 5px 0px #dedede;
+} */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #aaa;
+  /* font-weight: 800; */
+  text-transform: uppercase;
+  margin: 0 10px;
+  color :rgb(205, 205, 205) !important;
+
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+  
+}
+nav ul li a:hover {
+  /* color: rgb(186, 186, 186) !important; */
+  color: white !important;
+
+}
+
+
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0 !important;
+}
+nav.fill ul li a:hover {
+  color: #fff !important;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1 !important;
+}
+    </style>
+</head>
+<body>
+    <a href="#" id="toTopBtn" class="" >
+        <i class="fas fa-arrow-circle-up fa-3x" style="color:rgb(129, 43, 19)"></i>
+      </a>
+        
+
+
+    
+    
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-dark  shadow-sm d-none d-lg-block stroke">
+        <div class="container-fluid ">
+          <a style="padding-top: 0;
+
+          padding-bottom: 0; width:auto;" >
+           <img class="bi me-2" style="margin-left:5%;" src="static/img/logo.jpeg" width="23%" height="100%" alt="">
+
+          
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-flex  align-items-center justify-content-center " id="navbarScroll">
+
+            
+            <ul class="navbar-nav  col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0  " style="--bs-scroll-height: 100px;">
+              <li class="nav-item " >
+                <a class="nav-link active " aria-current="page" href="/" style="font-size: 125%">Home</a>
+              </li>
+              <li class="nav-item" style="margin-left:2vw;">
+                <a class="nav-link  " href="/about" style="font-size: 125%">About</a>
+              </li>
+              <li class="nav-item" style="margin-left:2vw;">
+                <a class="nav-link" id="contact-nav" href="#" style="font-size: 125%">Contact us</a>
+              </li>
+              <li class="nav-item" style="margin-left:2vw;">
+                <a class="nav-link " href="/careers" style="font-size: 125%">Careers</a>
+              </li>
+              
+             
+  
+            </ul>
+     
+          </div>
+        </div>
+      </nav>
+
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white d-lg-none">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">            -->
+            <img class="bi me-2" style="margin-left:5%;" src="static/img/logo.jpeg" width="23%" height="100%" alt="">
+          <!-- </a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item " style="margin-left:2vw;">
+                  <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item" style="margin-left:2vw;">
+                  <a class="nav-link text-white " href="/about">About</a>
+                </li>
+                <!-- <li class="nav-item" style="margin-left:2vw; " id="contact-nav">
+                    <a class="nav-link text-white "  href="#">contact us</a>
+                  </li> -->
+                <li class="nav-item" style="margin-left:2vw;">
+                  <a class="nav-link text-white" href="/careers">Careers</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+      
+    
+      <!-- <div class="cover-container d-flex w-100  p-3 mx-auto flex-column  text-center text-white bg-dark img-fluid" style="max-height:100%;height: auto;background-image: url('static/img/about-us.jpg');">
+
+      <main role="main" class="inner cover">
+        <h2 class="cover-heading">Who we are</h2>
+        <p class="lead">
+            We are a service provider to the oil and gas production and processing industry. We design, build oil and gas facilities, with commitment, delivery and operational excellence.
+We respond to the different needs of each client, helping them to transform the value of their assets across the oil and gas life cycle. Our service offering is underpinned by our provision of skills training with competency development and assurance frameworks.
+<br>Our teams:
+Design and build oil and gas infrastructure
+Train personnel
+
+        </p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
+      </main>
+
+</div> -->
+<div class="container" >
+    <div class="flex "  data-aos="fade-up">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container     " style="margin-top:10vh;padding-bottom:5vh;">
+              <!-- <h2 class="display-7 text-center" style="margin-top:5vh;">Engineering Design Services Offer a Complete Solution</h2> -->
+              <!-- <img src="static/img/about-pic-1.PNG"  class="lead" style="max-width:30vw;margin-top:5vh;"> -->
+              <br>
+              
+              <p class="lead"> <span style="font-weight:bold;">Rau Engineering & Research</span> is committed to develop and train the new generation engineers in Oil and Gas engineering design to cater for the exponential requirements of experienced personnel in the Industry world wide.
+                <br>
+                <br>
+                In view establishing the team, we are seeking capable, self-driven and energetic professional Oil & Gas design personnel for the following positions.
+                <br>
+                <br>
+                
+                Candidates should be committed to Quality and Safety, Innovative and a Pro-active approach to Engineering and Design activities. Experience in Engineering Design and a thorough knowledge of relevant codes & standards, Good communication skills, with fluency in English (both written and spoken), are essential requirements. </p>
+            </div>
+          </div>
+    </div>
+
+
+
+
+    <div class="flex "  data-aos="fade-up">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container  border-top  border-bottom " style="margin-top:5vh;padding-bottom:5vh;">
+              <h2 class="display-7" style="margin-top:5vh;">Lead / Senior Structural Engineer : </h2>
+              <!-- <img src="static/img/about-pic-1.PNG"  class="lead" style="max-width:30vw;margin-top:5vh;"> -->
+              <br>
+              
+              <p class="lead">
+                Must posses Bachelor / Master degree in Civil / Structural Engineering. At least 12 / 7 years of experience in conceptual studies, FEED, detailed design & engineering. Prior knowledge of SACS and STADD Pro software will be considered as a suitable qualification.
+              </p>
+            </div>
+          </div>
+    </div>
+
+
+
+    <div class="flex "  data-aos="fade-up">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container border-bottom " style="margin-top:5vh;padding-bottom:5vh;">
+              <h2 class="display-7" style="margin-top:5vh;">Lead /Senior Process Engineer:</h2>
+              <!-- <img src="static/img/about-pic-1.PNG"  class="lead" style="max-width:30vw;margin-top:5vh;"> -->
+              <br>
+              
+              <p class="lead">
+                Must posses Bachelor/Master degree in Chemical Engineering. At least 12 / 7 years of experience in conceptual studies, FEED, detailed design & engineering. HAZOP and design reviews, also pre-commissioning and commissioning procedures and activities. Process experience will include onshore & offshore upstream oil production and gas processing facilities. Experience in conducting process simulations particularly with HYSYS is essential. Familiarity with Process Hazard / Risk Analysis is advantageous. Responsibilities will include development of PFDs, P&IDs, UFDs & data sheet including sizing and specification equipment & instruments. </p>
+            </div>
+          </div>
+    </div>
+
+    <div class="flex "  data-aos="fade-up">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container border-bottom " style="margin-top:5vh;padding-bottom:5vh;">
+              <h2 class="display-7" style="margin-top:5vh;">Lead / Senior Electrical Engineer: </h2>
+              <!-- <img src="static/img/about-pic-1.PNG"  class="lead" style="max-width:30vw;margin-top:5vh;"> -->
+              <br>
+              
+              <p class="lead">
+                Must posses Bachelor /Master degree in Electrical Engineering. At least 12 / 7 years of experience in basic electrical engineering design including preparation of single line diagrams, schematic diagrams, load flow analysis, short circuit analysis, motor starting analysis, transient stability analysis, ground grid design, relay coordination and setting calculations, transformers, MCCs, cable sizing, lighting calculations, electrical equipment specification and layout etc. Shall be familiar with Hazardous Area Classification and be conversant with design software like EDSA, ETAP or CYME.     
+            </p>
+            </div>
+          </div>
+    </div>
+
+
+
+    <div class="flex "  data-aos="fade-up">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container border-bottom " style="margin-top:5vh;padding-bottom:5vh;">
+              <h2 class="display-7" style="margin-top:5vh;">Lead / Senior Instrumentation Engineer: </h2>
+              <!-- <img src="static/img/about-pic-1.PNG"  class="lead" style="max-width:30vw;margin-top:5vh;"> -->
+              <br>
+              
+              <p class="lead">
+                Must posses Bachelor / Master degree in Instrumentation Engineering. At least 12/7 to years of experience in conceptual studies, FEED, detailed design & engineering, and demands high levels competencies in the development of specifications, engineering and design for the procurement, installation and integration of systems and instrumentation. Hands on experience with INTOOLS will be an added advantage. Extensive experience of DCS / SGS / F&G systems is essential, as is experience of SCADA and communication networks. Familiarity with conducting and implementing safety studies is also desirable.     
+            </p>
+            </div>
+          </div>
+    </div>
+
+
+
+
+    <div class="flex "  data-aos="fade-up">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container border-bottom " style="margin-top:5vh;padding-bottom:5vh;">
+              <h2 class="display-7" style="margin-top:5vh;">Senior Piping Engineer:  </h2>
+              <!-- <img src="static/img/about-pic-1.PNG"  class="lead" style="max-width:30vw;margin-top:5vh;"> -->
+              <br>
+              
+              <p class="lead">
+                Must posses Bachelor / Master degree in Mechanical / Chemical / Piping Engineering. At least 7 years of experience in design and engineering of piping and equipment layout. Capable of independently producing design calculations, MTOs, bill of material, review of isometric drawings, specifications, conducting drawing review and vendor design evaluation. Should be familiar in preparation of shop drawings for fabrication. Must be familiar with relevant design & API, ANSI, DIN, BS codes and experience with CAESAR II software for stress analysis. Exposure to PDMS/PDS piping 3D design review is essential.    
+            </p>
+            </div>
+          </div>
+    </div>
+
+
+
+
+    <div class="flex "  data-aos="fade-up">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container border-bottom " style="margin-top:5vh;padding-bottom:5vh;">
+              <h2 class="display-7" style="margin-top:5vh;">Engineers - Structural / Process/ Piping / Mechanical / Electrical / Instrumentation:</h2>
+              <!-- <img src="static/img/about-pic-1.PNG"  class="lead" style="max-width:30vw;margin-top:5vh;"> -->
+              <br>
+              
+              <p class="lead">
+                Must posses Bachelor / Master degree in Mechanical / Electrical / Instruments and Controls Engineering with minimum 4 years of experience.     
+            </p>
+            </div>
+          </div>
+    </div>
+
+
+
+    <div class="flex "  data-aos="fade-up">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container border-bottom " style="margin-top:5vh;padding-bottom:5vh;">
+              <h2 class="display-7" style="margin-top:5vh;">Trainee Engineers - Structural / Process/ Piping / Mechanical / Electrical / Instrumentation:</h2>
+              <!-- <img src="static/img/about-pic-1.PNG"  class="lead" style="max-width:30vw;margin-top:5vh;"> -->
+              <br>
+              
+              <p class="lead">
+                Fresh Graduates with Bachelor /Master degree in Mechanical / Electrical / Instruments and Controls Engineering. 
+            </p>
+            </div>
+          </div>
+    </div>
+
+    <div class="flex "  data-aos="fade-up">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container border-bottom " style="margin-top:5vh;padding-bottom:5vh;">
+              <h2 class="display-7" style="margin-top:5vh;">Senior Designers - Structural / Piping / Electrical / Instrumentation: </h2>
+              <!-- <img src="static/img/about-pic-1.PNG"  class="lead" style="max-width:30vw;margin-top:5vh;"> -->
+              <br>
+              
+              <p class="lead">
+                Must posses Diploma or ITI Draftsman Certificate as minimum with at least 7 years of experience in respective discipline. The role involves leading small teams of designers and draftsmen in the preparation of CAD models using PDMS /PDS, design drawings, layouts and shop drawings for onshore and offshore facilities. This will involve working closely and interacting with the relevant discipline engineers to develop technical solutions in an efficient and pro-active manner. Activities also include checking of work performed by others, the generation of bills of materials for estimating and procurement purposes and detail design of facilities. 
+            </p>
+            </div>
+          </div>
+    </div>
+
+    <div class="flex "  data-aos="fade-up">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container border-bottom " style="margin-top:5vh;padding-bottom:5vh;">
+              <h2 class="display-7" style="margin-top:5vh;">Structural / Piping / Electrical / Instrument Designers:</h2>
+              <!-- <img src="static/img/about-pic-1.PNG"  class="lead" style="max-width:30vw;margin-top:5vh;"> -->
+              <br>
+              
+              <p class="lead">
+                Must posses Diploma or ITI Draftsman Certificate as minimum with at least 4 years of experience in respective discipline. This will involve working closely and interacting with the relevant discipline engineers to develop technical solutions in an efficient and pro-active manner. 
+            </p>
+            </div>
+          </div>
+    </div>
+
+</div>
+<br>
+<br>
+    <footer class="footer mt-auto py-3 bg-dark text-white"  >
+        <div class="flex row" style="margin-bottom:10px">
+            <div class="col">
+                <div class="container p-3" style="max-width:50%;">
+                <h5  class="font-weight-bold" style="margin-bottom:15px;">Rau Engineering & Research:</h5>
+                <hr>
+
+                <br>
+                    <h5 style="margin-bottom:15px;">Kazakhstan:</h5>
+                
+                    
+                    <p>Isatay Taimanov avenue 48 block C, apartment 380, Atyrau, Kazakhstan</p>
+                    
+                </div>
+            </div>
+            <div class="col">
+                <div class="container p-3" style="max-width:50%;">
+                    
+                <h5 class=" font-weight-bold"> Contact Information</h5>
+                <hr>
+                <br>
+                    <h5 style="margin-bottom:15px;">email:</h5>
+                    
+                    <p>business@rauengineering.net</p><br>
+                    
+                    <h5 style="margin-bottom:15px;">phone:</h5>
+
+                    <p>+7707 7931016</p>
+                    <p>+77022918188</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container text-center">
+          <span class="text-muted ">Copyright © 2021 Designed by : Rau Engineering & Research.
+            All Rights Reserved.</span>
+        </div>
+      </footer>
+
+
+
+      <script>
+        $(document).ready(function() {
+          if ($(this).scrollTop() > 100) {
+              
+                $('#toTopBtn').fadeIn();
+            } else {
+                $('#toTopBtn').fadeOut(1);
+            }
+        $(window).scroll(function() {
+          console.log($(this).scrollTop());
+        if ($(this).scrollTop() > 850) {
+                $('#toTopBtn').fadeIn();
+            } else {
+                $('#toTopBtn').fadeOut();
+            }
+        });
+        
+        $('#toTopBtn').click(function() {
+            
+
+        $("html, body").animate({
+            scrollTop: 0
+            }, 1000);
+        return false;
+        });
+
+        $('#down-chevron').click(function() {
+        $("html, body").animate({
+            scrollTop: 860
+            }, 1000);
+        return false;
+        });
+
+
+        $('#contact-nav').click(function() {
+        $("html, body").animate({
+            scrollTop: 3178
+            }, 1000);
+        return false;
+        });
+        
+
+        });
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
